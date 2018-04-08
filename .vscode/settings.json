@@ -20,6 +20,7 @@
         "*.log": true, 
         "*.fdb_latexmk": true, 
         "*.synctex.gz": true, 
+        "*.synctex(busy)": true,
         "*.pdf": true, // hide all .pdf in root
         "**/*.pdf": false, // show .pdf in subfolders
     },

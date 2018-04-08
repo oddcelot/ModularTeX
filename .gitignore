@@ -20,4 +20,5 @@
 *.log
 *.fdb_latexmk
 *.synctex.gz
+*.synctex(busy)
 /*.pdf

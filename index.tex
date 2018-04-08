@@ -1,0 +1,34 @@
+\def\maindoc{}  %**
+\documentclass[twoside]{article}
+\input{packages}
+
+% optional renaming of captions 
+% \addto\captionsngerman{\def\figurename{Abb.}}
+% \addto\extrasngerman{\def\figureautorefname{Abb.}}
+
+\begin{document}
+%------ add a cover page 
+    \thispagestyle{empty}
+    %\includepdf{content/cover} 
+  
+%------ create a new page for toc
+    \thispagestyle{empty}
+        \cleardoublepage
+        \setcounter{page}{1}
+        \pagenumbering{Roman}
+    \tableofcontents
+    \newpage
+        \setcounter{page}{1} % reset pagecounter for actual content
+        \pagenumbering{arabic} % change  
+
+%------ list of all files to be includes (in order)	
+\include{sample}
+
+%------ add bibliography
+\include{bibliography}
+    %------ alternativ approach
+    %\newpage
+    %\bibliography{Bibliothek}
+    %\bibliographystyle{unsrt} % sorted by usage in compiled document
+  
+\end{document} %**

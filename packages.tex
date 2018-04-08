@@ -1,0 +1,39 @@
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc} % universelle Zeichenlesung
+\usepackage[ngerman]{babel} % Deutsche Bezeichnungen für tableofcontents, figure, etc.
+\usepackage[T1]{fontenc} % um nochmal sicher zu gehen, dass alle Zeichen korrekt übernommen und benutzt werden 
+\usepackage{lmodern}
+\usepackage{graphicx} % Einbetten von Bildern und eps
+\usepackage{amsmath} % mehr Mathe-Pakete braucht ein Chemiker nicht
+\usepackage{pdfpages} % ermöglicht das Einbetten von ganzen PDFs und einzelnen Seiten daraus auf ganze Seiten
+\usepackage{subscript} % 
+\usepackage{siunitx} %
+\usepackage{textcomp} % für \textcelsius
+\usepackage[subrefformat=parens,labelformat=parens]{subfig} % für \ Subfigures yeah!
+\usepackage{csvsimple} % für Tabellen in csv
+\usepackage{acronym}
+\usepackage{enumerate}
+
+%LAYOUT
+
+\usepackage[onehalfspacing]{setspace} % 1,5er Zeilenabstand
+\parindent=0pt % Besser als \usepackage{parskip}
+\usepackage{float}	% Behebt das float Problem beim Einbetten von inline-Elementen (z.B. fig, equation, table) und ermöglicht genau Positionierung mit "[H]" = besser als "h"
+\usepackage{microtype} % bessere Lesbarkeit (allerdings nicht unbedingt bemerkbar ohne Vergleich)
+\usepackage{tabularx} %
+
+\usepackage[hcentering,bindingoffset=10mm]{geometry} % 
+	\geometry{a4paper, top=25mm, bottom=25mm} % bitte die Ränder und DIN-Format anpassen, falls gewünscht
+\usepackage[super, comma, numbers, square, sort]{natbib}
+	\floatstyle{plaintop}
+	\restylefloat{table}
+
+\usepackage{fancyhdr}
+	\renewcommand{\headrulewidth}{0.1pt} %obere Trennlinie
+	\renewcommand{\footrulewidth}{0pt} %untere Trennlinie
+	\fancyfoot[C]{ {\thepage} }
+\usepackage{geometry}
+	\geometry{a4paper, top=20mm, left=35mm, right=35mm, bottom=30mm}
+
+%FEHLER
+%\RequirePackage[l2tabu, orthodox]{nag} % falls man tatsächlich alles nach korrekter Semantik machen möchte

@@ -1,0 +1,31 @@
+%HEADER
+\def\subdoc{} \ifx \maindoc \subdoc \else \documentclass[]{article} \input{packages} \begin{document} \fi
+    \pagestyle{empty}
+    \pagenumbering{gobble}
+     
+    \begin{center}\LARGE Your great paper – Some byline here\end{center}
+    
+    \bigskip
+    \begin{center}
+        supervised by: \\
+        Prof. Dr. John Doe and Joan Doe
+    \end{center}
+    \vspace{10mm}
+    
+    \begin{center}\large Your Field of Science: \\ Biotechnology and Biopharmaceutical Technology\end{center}
+    \vspace{140mm}
+    \normalsize
+    
+    I hereby declare that the thesis submitted is my own unaided work. All direct or indi- rect sources used are acknowledged as references. \\
+    \bigskip
+    \begin{center}
+    \begin{tabular}{llrr}
+            John Doe &		Group: &	A1.1\\
+            \href{mailto:user@mail.com}{user@mail.com}	&&\\
+    \end{tabular}
+    \end{center}
+    
+    \normalsize
+      
+%END CONTENT
+\ifx \maindoc \subdoc \else \end{document} \fi

@@ -7,7 +7,7 @@
 \usepackage{microtype} % better readability of font (but not that much of a difference)
 \usepackage{graphicx} % allow inclusion of graphics
 \usepackage{pdfpages} % embed whole or partial .pdf files
-\usepackage[super, comma, numbers, square, sort]{natbib} % use citations and generate cition list in the style of Nature journal
+\usepackage[super, comma, numbers, square, sort]{natbib} % use citations and generate citation list in the style of Nature journal
 
 
 % useful text extension functions
@@ -27,13 +27,17 @@
 % layout
 \usepackage[onehalfspacing]{setspace} % set line height to 1.5 
 \parindent=0pt % remove indentation after paragraphs (alternatively use \usepackage{parskip})
-\usepackage{float}	% let user determine floating position of fig, equation, table, etc. (only use if neccessary, since latex does a good job on ints own)
+\usepackage{float}	% let user determine floating position of fig, equation, table, etc. (only use if necessary, since latex does a good job on its own)
 \usepackage{fancyhdr} % define 
 	\renewcommand{\headrulewidth}{0.1pt} % add thin line to page header
 	\renewcommand{\footrulewidth}{0pt} % remove line from page footer
 	\fancyfoot[C]{ {\thepage} } % add page number to center of page footer
 \usepackage[hcentering,bindingoffset=10mm]{geometry} % set binding offset for double sided style
 	\geometry{a4paper, top=25mm, bottom=25mm} % set din format and page margins
+
+% optional renaming of captions 
+\addto\captionsngerman{\def\figurename{Abb.}}
+\addto\extrasngerman{\def\figureautorefname{Abb.}}
 
 
 % error hinting

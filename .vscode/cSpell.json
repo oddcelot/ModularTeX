@@ -1,0 +1,15 @@
+{
+ "version": "0.1",
+ "language": "en-GB,de-de",
+ "dictionaryDefinitions": [
+     { "name": "projectDictionary", "path": "./dictionary.txt"}
+ ],
+ "ignoreRegExpList": [
+     "^\\\\\\w+{?",
+     "\\\\cite{\\w+}",
+     "\\\\begin{\\w+}",
+     "\\\\end{\\w+}",
+     "\\\\usepackage{\\w+}",
+     "\\\\addto\\{\\w+}",
+     "\\\\bibliographystyle{\\w+}"]
+}

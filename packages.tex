@@ -1,39 +1,40 @@
-\usepackage{hyperref}
-\usepackage[utf8]{inputenc} % universelle Zeichenlesung
-\usepackage[ngerman]{babel} % Deutsche Bezeichnungen für tableofcontents, figure, etc.
-\usepackage[T1]{fontenc} % um nochmal sicher zu gehen, dass alle Zeichen korrekt übernommen und benutzt werden 
-\usepackage{lmodern}
-\usepackage{graphicx} % Einbetten von Bildern und eps
-\usepackage{amsmath} % mehr Mathe-Pakete braucht ein Chemiker nicht
-\usepackage{pdfpages} % ermöglicht das Einbetten von ganzen PDFs und einzelnen Seiten daraus auf ganze Seiten
-\usepackage{subscript} % 
-\usepackage{siunitx} %
-\usepackage{textcomp} % für \textcelsius
-\usepackage[subrefformat=parens,labelformat=parens]{subfig} % für \ Subfigures yeah!
-\usepackage{csvsimple} % für Tabellen in csv
-\usepackage{acronym}
-\usepackage{enumerate}
+% bare minimum for useful work
+\usepackage[T1]{fontenc} % font encoding for most european language characters
+\usepackage[utf8]{inputenc} % use utf8 characters for inputs
+\usepackage{hyperref} % generate links for references in pdf
+\usepackage[ngerman]{babel} % german translations for tableofcontents, figure, etc.
+\usepackage{lmodern} % use smoother latin font
+\usepackage{microtype} % better readability of font (but not that much of a difference)
+\usepackage{graphicx} % allow inclusion of graphics
+\usepackage{pdfpages} % embed whole or partial .pdf files
+\usepackage[super, comma, numbers, square, sort]{natbib} % use citations and generate cition list in the style of Nature journal
 
-%LAYOUT
 
-\usepackage[onehalfspacing]{setspace} % 1,5er Zeilenabstand
-\parindent=0pt % Besser als \usepackage{parskip}
-\usepackage{float}	% Behebt das float Problem beim Einbetten von inline-Elementen (z.B. fig, equation, table) und ermöglicht genau Positionierung mit "[H]" = besser als "h"
-\usepackage{microtype} % bessere Lesbarkeit (allerdings nicht unbedingt bemerkbar ohne Vergleich)
-\usepackage{tabularx} %
+% useful text extension functions
+\usepackage{subscript} % use subscript text 
+\usepackage{textcomp} % use special symbols like ° with \textcelsius in plain text
+\usepackage{enumerate} % use easy numbered list instead of \itemize
+\usepackage{acronym} % define and display acronyms in various ways in document
 
-\usepackage[hcentering,bindingoffset=10mm]{geometry} % 
-	\geometry{a4paper, top=25mm, bottom=25mm} % bitte die Ränder und DIN-Format anpassen, falls gewünscht
-\usepackage[super, comma, numbers, square, sort]{natbib}
-	\floatstyle{plaintop}
-	\restylefloat{table}
 
-\usepackage{fancyhdr}
-	\renewcommand{\headrulewidth}{0.1pt} %obere Trennlinie
-	\renewcommand{\footrulewidth}{0pt} %untere Trennlinie
-	\fancyfoot[C]{ {\thepage} }
-\usepackage{geometry}
-	\geometry{a4paper, top=20mm, left=35mm, right=35mm, bottom=30mm}
+% academic stuff
+\usepackage{siunitx} % use SI units with correct formatting and better syntax
+\usepackage{amsmath} % standard package for all things math
+\usepackage{csvsimple} % import tables form .csv files
+\usepackage{tabularx} % generate better tables
 
-%FEHLER
-%\RequirePackage[l2tabu, orthodox]{nag} % falls man tatsächlich alles nach korrekter Semantik machen möchte
+
+% layout
+\usepackage[onehalfspacing]{setspace} % set line height to 1.5 
+\parindent=0pt % remove indentation after paragraphs (alternatively use \usepackage{parskip})
+\usepackage{float}	% let user determine floating position of fig, equation, table, etc. (only use if neccessary, since latex does a good job on ints own)
+\usepackage{fancyhdr} % define 
+	\renewcommand{\headrulewidth}{0.1pt} % add thin line to page header
+	\renewcommand{\footrulewidth}{0pt} % remove line from page footer
+	\fancyfoot[C]{ {\thepage} } % add page number to center of page footer
+\usepackage[hcentering,bindingoffset=10mm]{geometry} % set binding offset for double sided style
+	\geometry{a4paper, top=25mm, bottom=25mm} % set din format and page margins
+
+
+% error hinting
+%\RequirePackage[l2tabu, orthodox]{nag} % error hinting for the most accurate of people

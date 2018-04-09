@@ -23,6 +23,7 @@
         "*.synctex(busy)": true,
         "*.pdf": true, // hide all .pdf in root
         "**/*.pdf": false, // show .pdf in subfolders
+        "LICENSE": true, // hide license file
     },
     "editor.cursorBlinking": "solid",
     "telemetry.enableCrashReporter": false,
@@ -30,5 +31,7 @@
     "editor.wordWrap": "on",
     "editor.wordWrapColumn": 80,
     "editor.wrappingIndent": "same",
+    "editor.tabCompletion": true,
+    "editor.snippetSuggestions": "top",
     "cSpell.enabled": true,
 }

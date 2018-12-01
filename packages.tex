@@ -9,19 +9,44 @@
 \usepackage{pdfpages} % embed whole or partial .pdf files
 \usepackage[super, comma, numbers, square, sort]{natbib} % use citations and generate citation list in the style of Nature journal
 
+\usepackage{svg}
 
 % useful text extension functions
 \usepackage{subscript} % use subscript text 
 \usepackage{textcomp} % use special symbols like ° with \textcelsius in plain text
 \usepackage{enumerate} % use easy numbered list instead of \itemize
+\usepackage{multicol}
+\usepackage{booktabs}
+\usepackage[ampersand]{easylist}
+\usepackage{amssymb}
 \usepackage{acronym} % define and display acronyms in various ways in document
+\usepackage{caption}
+\captionsetup{belowskip=0pt,aboveskip=6pt}
 
+\usepackage{wrapfig}
+\usepackage{lipsum}
+
+\newenvironment{conditions}
+  {\par\vspace{\abovedisplayskip}\noindent\begin{tabular}{>{$}l<{$} @{${:} \hspace{2mm}{}$} l}}
+  {\end{tabular}\par\vspace{\belowdisplayskip}}
+
+
+\usepackage{tikz} 
+\usepackage{etoolbox}
+\newcommand{\circled}[2][]{%
+  \tikz[baseline=(char.base)]{%
+    \node[shape = circle, draw, inner sep = 0.7pt]
+    (char) {\phantom{\ifblank{#1}{#2}{#1}}};%
+    \node at (char.center) {\makebox[1pt][c]{#2}};}}
+\robustify{\circled}
 
 % academic stuff
 \usepackage{siunitx} % use SI units with correct formatting and better syntax
+\sisetup{locale = DE}
 \usepackage{amsmath} % standard package for all things math
 \usepackage{csvsimple} % import tables form .csv files
 \usepackage{tabularx} % generate better tables
+\usepackage[version=4]{mhchem}
 
 
 % layout
@@ -34,10 +59,26 @@
 	\fancyfoot[C]{ {\thepage} } % add page number to center of page footer
 \usepackage[hcentering,bindingoffset=10mm]{geometry} % set binding offset for double sided style
 	\geometry{a4paper, top=25mm, bottom=25mm} % set din format and page margins
+	\renewcommand{\headrulewidth}{0pt} % add thin line to page header
+  \renewcommand{\footrulewidth}{0pt} % remove line from page footer
+  \fancyfoot[C]{ {\thepage} } 
+	\fancyfoot[R]{} % add page number to center of page footer
+	\fancyhead{} %zentrierte Kopfzeile
+\usepackage[hcentering,bindingoffset=0mm]{geometry} % set binding offset for double sided style
+	\geometry{a4paper, top=20mm, bottom=20mm, left=20mm, right=20mm} % set din format and page margins
+
+\usepackage[nameinlink,capitalize]{cleveref}
 
 % optional renaming of captions 
 \addto\captionsngerman{\def\figurename{Abb.}}
 \addto\extrasngerman{\def\figureautorefname{Abb.}}
+\addto\captionsngerman{\def\tablename{Tab.}}
+\addto\extrasngerman{\def\tableautorefname{Tab.}}
+
+% optional renaming of references using cref{} 
+\crefname{figure}{Abb.}{Abb.}
+\crefname{equation}{Gl.}{Gl.}
+\crefname{table}{Tab.}{Tab.}   
 
 
 % error hinting

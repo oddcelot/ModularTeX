@@ -7,26 +7,19 @@
     \thispagestyle{empty}
     %\includepdf{content/cover} 
     \include{cover}
-
+ 
   
 %------ create a new page for toc
     \thispagestyle{empty}
         \cleardoublepage
         \setcounter{page}{1}
         \pagenumbering{Roman}
-    \tableofcontents
+    \tableofcontents 
     \newpage
         \setcounter{page}{1} % reset page counter for actual content
         \pagenumbering{arabic} % change  
 
 %------ list of all files to be includes (in order)	
-\include{sample}
 
-%------ add bibliography
-\include{bibliography}
-    %------ alternativ approach
-    %\newpage
-    %\bibliography{Bibliothek}
-    %\bibliographystyle{unsrt} % sorted by usage in compiled document
   
 \end{document} %**

@@ -18,6 +18,7 @@
         "*.ist": true,
         "*.fls": true,
         "*.log": true,
+        "*.xdv": true,
         "*.fdb_latexmk": true,
         "*.synctex.gz": true,
         "*.synctex(busy)": true,
@@ -34,4 +35,17 @@
     "editor.tabCompletion": true,
     "editor.snippetSuggestions": "top",
     "cSpell.enabled": true,
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-xelatex",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        },
+    ]
 }

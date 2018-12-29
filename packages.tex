@@ -64,7 +64,6 @@
   \fancyfoot[C]{ {\thepage} } 
 	\fancyfoot[R]{} % add page number to center of page footer
 	\fancyhead{} %zentrierte Kopfzeile
-\usepackage[hcentering,bindingoffset=0mm]{geometry} % set binding offset for double sided style
 	\geometry{a4paper, top=20mm, bottom=20mm, left=20mm, right=20mm} % set din format and page margins
 
 \usepackage[nameinlink,capitalize]{cleveref}
@@ -80,6 +79,8 @@
 \crefname{equation}{Gl.}{Gl.}
 \crefname{table}{Tab.}{Tab.}   
 
+\usepackage{fontspec}
+%\setmainfont{Arial}
 
 % error hinting
 %\RequirePackage[l2tabu, orthodox]{nag} % error hinting for the most accurate of people

@@ -18,6 +18,7 @@
 *.ist
 *.fls
 *.log
+*.xdv
 *.fdb_latexmk
 *.synctex.gz
 *.synctex(busy)
